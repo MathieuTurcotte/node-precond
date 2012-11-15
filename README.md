@@ -21,7 +21,7 @@ Precond provides a set of functions to verify arguments and state correctness
 It lets you rewrite constructs like the following
 
 ```js
-if (!this.connected) {
+if (!this.isConnected) {
     throw new Error('Client should be connected before calling X.');
 }
 ```
@@ -61,58 +61,58 @@ Provided checks are the following:
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensure that expression is true. Throws an 'IllegalArgumentError' if expression
+Ensure that expression is true. Throws an `IllegalArgumentError` if expression
 is false.
 
 #### precond.checkState(expression, messageFormat, [formatArgs, ...])
 
-Ensure that expression is true. Throws an 'IllegalStateError' if expression
+Ensure that expression is true. Throws an `IllegalStateError` if expression
 is false.
 
 #### precond.checkIsDef(expression, messageFormat, [formatArgs, ...])
 
 Ensure that expression is defined (could be null). Throws an
-'IllegalArgumentError' if expression is undefined.
+`IllegalArgumentError` if expression is undefined.
 
 #### precond.checkIsDefAndNotNull(expression, messageFormat, [formatArgs, ...])
 
 Ensure that expression is defined and not null. Throws an
-'IllegalArgumentError' if expression is undefined or null.
+`IllegalArgumentError` if expression is undefined or null.
 
 #### precond.checkIsArray(expression, messageFormat, [formatArgs, ...])
 
-Ensure that expression is an array. Throws an 'IllegalArgumentError' if
+Ensure that expression is an array. Throws an `IllegalArgumentError` if
 expression isn't an array.
 
 #### precond.checkIsNumber(expression, messageFormat, [formatArgs, ...])
 
-Ensure that expression is a number. Throws an 'IllegalArgumentError' if
+Ensure that expression is a number. Throws an `IllegalArgumentError` if
 expression isn't a number.
 
 #### precond.checkIsBoolean(expression, messageFormat, [formatArgs, ...])
 
-Ensure that expression is a boolean. Throws an 'IllegalArgumentError' if
+Ensure that expression is a boolean. Throws an `IllegalArgumentError` if
 expression isn't a boolean.
 
 #### precond.checkIsFunction(expression, messageFormat, [formatArgs, ...])
 
-Ensure that expression is a function. Throws an 'IllegalArgumentError' if
+Ensure that expression is a function. Throws an `IllegalArgumentError` if
 expression isn't a function.
 
 #### precond.checkIsObject(expression, messageFormat, [formatArgs, ...])
 
-Ensure that expression is an object. Throws an 'IllegalArgumentError' if
+Ensure that expression is an object. Throws an `IllegalArgumentError` if
 expression isn't an object.
 
 ### Errors
 
 #### precond.IllegalArgumentError
 
-Extends 'Error' and is thrown to signal illegal arguments.
+Extends `Error` and is thrown to signal illegal arguments.
 
 #### precond.IllegalStateError
 
-Extends 'Error' and is thrown to signal that the program or object as reached
+Extends `Error` and is thrown to signal that the program or object as reached
 an illegal state.
 
 ## License
