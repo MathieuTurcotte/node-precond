@@ -1,4 +1,4 @@
-# Preconditions for Node.js
+# Preconditions for Node.js [![Build Status](https://secure.travis-ci.org/MathieuTurcotte/node-precond.png?branch=master)](https://travis-ci.org/MathieuTurcotte/node-precond)
 
 Precondition checks for Node.js.
 
