@@ -1,0 +1,23 @@
+{
+    "name": "precond",
+    "description": "Preconditions checking utilities.",
+    "version": "0.1.0",
+    "author": "Mathieu Turcotte <turcotte.mat@gmail.com>",
+    "keywords": ["preconditions", "asserts", "invariants"],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MathieuTurcotte/node-precond.git"
+    },
+    "devDependencies": {
+        "sinon": "1.4",
+        "nodeunit": "0.7",
+        "jshint": "0.9.0"
+    },
+    "scripts": {
+        "pretest": "node_modules/jshint/bin/hint lib/ tests/ examples/ index.js",
+        "test": "node_modules/nodeunit/bin/nodeunit tests/"
+    },
+    "engines": {
+        "node": ">= 0.6"
+    }
+}
