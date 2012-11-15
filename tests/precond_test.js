@@ -3,9 +3,6 @@
  * Licensed under the MIT license.
  */
 
-var sinon = require('sinon'),
-    util = require('util');
-
 var precond = require('../lib/checks');
 
 exports["Precond"] = {
