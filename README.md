@@ -49,7 +49,7 @@ Provided checks are the following:
 
 ### precond.checkArgument(expression, [messageFormat, [formatArgs, ...]])
 
-- expression: an expression to test for trueness
+- expression: the expression that is required to be truthy
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
@@ -58,7 +58,7 @@ is false.
 
 ### precond.checkState(expression, [messageFormat, [formatArgs, ...]])
 
-- expression: an expression to test for trueness
+- expression: the expression that is required to be truthy
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
@@ -67,7 +67,7 @@ is false.
 
 ### precond.checkIsDef(expression, [messageFormat, [formatArgs, ...]])
 
-- expression: an expression that is required to be defined
+- expression: the expression that is required to be defined
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
@@ -76,7 +76,7 @@ Ensure that expression is defined (could be null). Throws an
 
 ### precond.checkIsDefAndNotNull(expression, [messageFormat, [formatArgs, ...]])
 
-- expression: an expression that is required to be defined and not null
+- expression: the expression that is required to be defined and not null
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
@@ -85,7 +85,7 @@ Ensure that expression is defined and not null. Throws an
 
 ### precond.checkIsArray(expression, [messageFormat, [formatArgs, ...]])
 
-- expression: an expression that is required to be an array
+- expression: the expression that is required to be an array
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
@@ -94,7 +94,7 @@ expression isn't an array.
 
 ### precond.checkIsNumber(expression, [messageFormat, [formatArgs, ...]])
 
-- expression: an expression that is required to be a number
+- expression: the expression that is required to be a number
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
@@ -103,7 +103,7 @@ expression isn't a number.
 
 ### precond.checkIsBoolean(expression, [messageFormat, [formatArgs, ...]])
 
-- expression: an expression that is required to be a boolean
+- expression: the expression that is required to be a boolean
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
@@ -112,7 +112,7 @@ expression isn't a boolean.
 
 ### precond.checkIsFunction(expression, [messageFormat, [formatArgs, ...]])
 
-- expression: an expression that is required to be a function
+- expression: the expression that is required to be a function
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
@@ -121,7 +121,7 @@ expression isn't a function.
 
 ### precond.checkIsObject(expression, [messageFormat, [formatArgs, ...]])
 
-- expression: an expression that is required to be an object
+- expression: the expression that is required to be an object
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
