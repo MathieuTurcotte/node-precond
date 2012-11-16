@@ -14,7 +14,7 @@ npm install precond
 npm test
 ```
 
-## Usage
+## Overview
 
 Precond provides a set of functions to verify arguments and state correctness
 
@@ -39,10 +39,6 @@ both produce the same stack trace.
 All arguments after the message will be used to format the actual error
 message that will be thrown.
 
-## API
-
-### Checks
-
 Provided checks are the following:
 
 - checkArgument(expression, messageFormat, [formatArgs, ...])
@@ -55,7 +51,9 @@ Provided checks are the following:
 - checkIsFunction(expression, messageFormat, [formatArgs, ...])
 - checkIsObject(expression, messageFormat, [formatArgs, ...])
 
-#### precond.checkArgument(expression, messageFormat, [formatArgs, ...])
+## API
+
+### precond.checkArgument(expression, messageFormat, [formatArgs, ...])
 
 - expression: an expression to test for trueness
 - messageFormat: error message format template
@@ -64,53 +62,83 @@ Provided checks are the following:
 Ensure that expression is true. Throws an `IllegalArgumentError` if expression
 is false.
 
-#### precond.checkState(expression, messageFormat, [formatArgs, ...])
+### precond.checkState(expression, messageFormat, [formatArgs, ...])
+
+- expression: an expression to test for trueness
+- messageFormat: error message format template
+- formatArgs: arguments to be substituted into the message template
 
 Ensure that expression is true. Throws an `IllegalStateError` if expression
 is false.
 
-#### precond.checkIsDef(expression, messageFormat, [formatArgs, ...])
+### precond.checkIsDef(expression, messageFormat, [formatArgs, ...])
+
+- expression: an expression that is required to be defined
+- messageFormat: error message format template
+- formatArgs: arguments to be substituted into the message template
 
 Ensure that expression is defined (could be null). Throws an
 `IllegalArgumentError` if expression is undefined.
 
-#### precond.checkIsDefAndNotNull(expression, messageFormat, [formatArgs, ...])
+### precond.checkIsDefAndNotNull(expression, messageFormat, [formatArgs, ...])
+
+- expression: an expression that is required to be defined and not null
+- messageFormat: error message format template
+- formatArgs: arguments to be substituted into the message template
 
 Ensure that expression is defined and not null. Throws an
 `IllegalArgumentError` if expression is undefined or null.
 
-#### precond.checkIsArray(expression, messageFormat, [formatArgs, ...])
+### precond.checkIsArray(expression, messageFormat, [formatArgs, ...])
+
+- expression: an expression that is required to be an array
+- messageFormat: error message format template
+- formatArgs: arguments to be substituted into the message template
 
 Ensure that expression is an array. Throws an `IllegalArgumentError` if
 expression isn't an array.
 
-#### precond.checkIsNumber(expression, messageFormat, [formatArgs, ...])
+### precond.checkIsNumber(expression, messageFormat, [formatArgs, ...])
+
+- expression: an expression that is required to be a number
+- messageFormat: error message format template
+- formatArgs: arguments to be substituted into the message template
 
 Ensure that expression is a number. Throws an `IllegalArgumentError` if
 expression isn't a number.
 
-#### precond.checkIsBoolean(expression, messageFormat, [formatArgs, ...])
+### precond.checkIsBoolean(expression, messageFormat, [formatArgs, ...])
+
+- expression: an expression that is required to be a boolean
+- messageFormat: error message format template
+- formatArgs: arguments to be substituted into the message template
 
 Ensure that expression is a boolean. Throws an `IllegalArgumentError` if
 expression isn't a boolean.
 
-#### precond.checkIsFunction(expression, messageFormat, [formatArgs, ...])
+### precond.checkIsFunction(expression, messageFormat, [formatArgs, ...])
+
+- expression: an expression that is required to be a function
+- messageFormat: error message format template
+- formatArgs: arguments to be substituted into the message template
 
 Ensure that expression is a function. Throws an `IllegalArgumentError` if
 expression isn't a function.
 
-#### precond.checkIsObject(expression, messageFormat, [formatArgs, ...])
+### precond.checkIsObject(expression, messageFormat, [formatArgs, ...])
+
+- expression: an expression that is required to be an object
+- messageFormat: error message format template
+- formatArgs: arguments to be substituted into the message template
 
 Ensure that expression is an object. Throws an `IllegalArgumentError` if
 expression isn't an object.
 
-### Errors
-
-#### precond.IllegalArgumentError
+### precond.IllegalArgumentError
 
 Extends `Error` and is thrown to signal illegal arguments.
 
-#### precond.IllegalStateError
+### precond.IllegalStateError
 
 Extends `Error` and is thrown to signal that the program or object as reached
 an illegal state.
