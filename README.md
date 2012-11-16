@@ -35,19 +35,19 @@ message that will be thrown.
 
 Provided checks are the following:
 
-- checkArgument(expression, [messageFormat, formatArgs, ...])
-- checkState(expression, [messageFormat, formatArgs, ...])
-- checkIsDef(expression, [messageFormat, formatArgs, ...])
-- checkIsDefAndNotNull(expression, [messageFormat, formatArgs, ...])
-- checkIsArray(expression, [messageFormat, formatArgs, ...])
-- checkIsNumber(expression, [messageFormat, formatArgs, ...])
-- checkIsBoolean(expression, [messageFormat, formatArgs, ...])
-- checkIsFunction(expression, [messageFormat, formatArgs, ...])
-- checkIsObject(expression, [messageFormat, formatArgs, ...])
+- checkArgument(expression, [messageFormat, [formatArgs, ...]])
+- checkState(expression, [messageFormat, [formatArgs, ...]])
+- checkIsDef(expression, [messageFormat, [formatArgs, ...]])
+- checkIsDefAndNotNull(expression, [messageFormat, [formatArgs, ...]])
+- checkIsArray(expression, [messageFormat, [formatArgs, ...]])
+- checkIsNumber(expression, [messageFormat, [formatArgs, ...]])
+- checkIsBoolean(expression, [messageFormat, [formatArgs, ...]])
+- checkIsFunction(expression, [messageFormat, [formatArgs, ...]])
+- checkIsObject(expression, [messageFormat, [formatArgs, ...]])
 
 ## API
 
-### precond.checkArgument(expression, [messageFormat, formatArgs, ...])
+### precond.checkArgument(expression, [messageFormat, [formatArgs, ...]])
 
 - expression: an expression to test for trueness
 - messageFormat: error message format template
@@ -56,7 +56,7 @@ Provided checks are the following:
 Ensure that expression is true. Throws an `IllegalArgumentError` if expression
 is false.
 
-### precond.checkState(expression, [messageFormat, formatArgs, ...])
+### precond.checkState(expression, [messageFormat, [formatArgs, ...]])
 
 - expression: an expression to test for trueness
 - messageFormat: error message format template
@@ -65,7 +65,7 @@ is false.
 Ensure that expression is true. Throws an `IllegalStateError` if expression
 is false.
 
-### precond.checkIsDef(expression, [messageFormat, formatArgs, ...])
+### precond.checkIsDef(expression, [messageFormat, [formatArgs, ...]])
 
 - expression: an expression that is required to be defined
 - messageFormat: error message format template
@@ -74,7 +74,7 @@ is false.
 Ensure that expression is defined (could be null). Throws an
 `IllegalArgumentError` if expression is undefined.
 
-### precond.checkIsDefAndNotNull(expression, [messageFormat, formatArgs, ...])
+### precond.checkIsDefAndNotNull(expression, [messageFormat, [formatArgs, ...]])
 
 - expression: an expression that is required to be defined and not null
 - messageFormat: error message format template
@@ -83,7 +83,7 @@ Ensure that expression is defined (could be null). Throws an
 Ensure that expression is defined and not null. Throws an
 `IllegalArgumentError` if expression is undefined or null.
 
-### precond.checkIsArray(expression, [messageFormat, formatArgs, ...])
+### precond.checkIsArray(expression, [messageFormat, [formatArgs, ...]])
 
 - expression: an expression that is required to be an array
 - messageFormat: error message format template
@@ -92,7 +92,7 @@ Ensure that expression is defined and not null. Throws an
 Ensure that expression is an array. Throws an `IllegalArgumentError` if
 expression isn't an array.
 
-### precond.checkIsNumber(expression, [messageFormat, formatArgs, ...])
+### precond.checkIsNumber(expression, [messageFormat, [formatArgs, ...]])
 
 - expression: an expression that is required to be a number
 - messageFormat: error message format template
@@ -101,7 +101,7 @@ expression isn't an array.
 Ensure that expression is a number. Throws an `IllegalArgumentError` if
 expression isn't a number.
 
-### precond.checkIsBoolean(expression, [messageFormat, formatArgs, ...])
+### precond.checkIsBoolean(expression, [messageFormat, [formatArgs, ...]])
 
 - expression: an expression that is required to be a boolean
 - messageFormat: error message format template
@@ -110,7 +110,7 @@ expression isn't a number.
 Ensure that expression is a boolean. Throws an `IllegalArgumentError` if
 expression isn't a boolean.
 
-### precond.checkIsFunction(expression, [messageFormat, formatArgs, ...])
+### precond.checkIsFunction(expression, [messageFormat, [formatArgs, ...]])
 
 - expression: an expression that is required to be a function
 - messageFormat: error message format template
@@ -119,7 +119,7 @@ expression isn't a boolean.
 Ensure that expression is a function. Throws an `IllegalArgumentError` if
 expression isn't a function.
 
-### precond.checkIsObject(expression, [messageFormat, formatArgs, ...])
+### precond.checkIsObject(expression, [messageFormat, [formatArgs, ...]])
 
 - expression: an expression that is required to be an object
 - messageFormat: error message format template
