@@ -8,12 +8,6 @@ Precondition checks for Node.js.
 npm install precond
 ```
 
-## Unit tests
-
-```
-npm test
-```
-
 ## Overview
 
 Precond provides a set of functions to verify arguments and state correctness
@@ -142,6 +136,12 @@ Extends `Error` and is thrown to signal illegal arguments.
 
 Extends `Error` and is thrown to signal that the program or object as reached
 an illegal state.
+
+## Unit tests
+
+```
+npm test
+```
 
 ## License
 
