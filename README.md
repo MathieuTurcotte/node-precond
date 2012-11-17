@@ -26,9 +26,9 @@ into a more compact and declarative check bellow.
 precond.checkState(this.isConnected, 'Client should be ...');
 ```
 
-Note that even though the throw statement is wrapped in a function, the call
-stack will still start from the calling function. So the previous examples will
-both produce the same stack trace.
+**Note that even though the throw statement is wrapped in a function, the call
+stack will still start from the calling function. So the previous examples would
+both produce the same stack trace.**
 
 All arguments after the message will be used to format the actual error
 message that will be thrown.
