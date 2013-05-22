@@ -1,4 +1,6 @@
-# Preconditions for Node.js [![Build Status](https://secure.travis-ci.org/MathieuTurcotte/node-precond.png?branch=master)](https://travis-ci.org/MathieuTurcotte/node-precond)
+# Preconditions for Node.js 
+[![Build Status](https://secure.travis-ci.org/MathieuTurcotte/node-precond.png?branch=master)](https://travis-ci.org/MathieuTurcotte/node-precond)
+[![NPM version](https://badge.fury.io/js/precond.png)](http://badge.fury.io/js/precond)
 
 Precondition checks for Node.js.
 
