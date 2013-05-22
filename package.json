@@ -9,12 +9,12 @@
         "url": "https://github.com/MathieuTurcotte/node-precond.git"
     },
     "devDependencies": {
-        "nodeunit": "0.7",
+        "nodeunit": "0.8",
         "jshint": "2.1"
     },
     "scripts": {
         "pretest": "node_modules/.bin/jshint lib/ tests/ examples/ index.js",
-        "test": "node_modules/nodeunit/bin/nodeunit tests/"
+        "test": "node_modules/.bin/nodeunit tests/"
     },
     "engines": {
         "node": ">= 0.6"
