@@ -14,7 +14,7 @@ main({});
 main([]);
 
 try {
-   main(null);
+    main(null);
 } catch(err) {
     console.log(err.stack);
 }
