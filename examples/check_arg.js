@@ -6,7 +6,7 @@
 var precond = require('../index');
 
 function main(a, b) {
-    precond.checkArgument(a > b, 'a (%s) should be greatre than b (%s)', a, b);
+    precond.checkArgument(a > b, 'a (%s) should be greater than b (%s)', a, b);
 }
 
 try {
