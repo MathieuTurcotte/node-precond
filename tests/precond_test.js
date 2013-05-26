@@ -28,6 +28,7 @@ exports["Precond"] = {
         test.throws(function() {
             precond.checkIsDef(undefined, 'abc %s def %s', 1, 3);
         }, /abc 1 def 3/);
+        test.equals(0, precond.checkIsDef(0));
         test.done();
     },
 
@@ -41,6 +42,7 @@ exports["Precond"] = {
         test.throws(function() {
             precond.checkIsDefAndNotNull(null, 'abc %s def %s', 1, 3);
         }, /abc 1 def 3/);
+        test.equals(0, precond.checkIsDefAndNotNull(0));
         test.done();
     },
 
@@ -49,6 +51,8 @@ exports["Precond"] = {
         test.throws(function() {
             precond.checkIsArray({}, 'abc %s def %s', 1, 3);
         }, /abc 1 def 3/);
+        var arr = [1, 2];
+        test.equals(arr, precond.checkIsArray(arr));
         test.done();
     },
 
@@ -57,6 +61,7 @@ exports["Precond"] = {
         test.throws(function() {
             precond.checkIsNumber({}, 'abc %s def %s', 1, 3);
         }, /abc 1 def 3/);
+        test.equals(0, precond.checkIsNumber(0));
         test.done();
     },
 
@@ -66,6 +71,7 @@ exports["Precond"] = {
         test.throws(function() {
             precond.checkIsBoolean({}, 'abc %s def %s', 1, 3);
         }, /abc 1 def 3/);
+        test.equals(true, precond.checkIsBoolean(true));
         test.done();
     },
 
@@ -74,6 +80,8 @@ exports["Precond"] = {
         test.throws(function() {
             precond.checkIsBoolean({}, 'abc %s def %s', 1, 3);
         }, /abc 1 def 3/);
+        var fn = function() {};
+        test.equals(fn, precond.checkIsFunction(fn));
         test.done();
     },
 
@@ -85,6 +93,8 @@ exports["Precond"] = {
         test.throws(function() {
             precond.checkIsObject(null, 'abc %s def %s', 1, 3);
         }, /abc 1 def 3/);
+        var obj = {};
+        test.equals(obj, precond.checkIsObject(obj));
         test.done();
     }
 };

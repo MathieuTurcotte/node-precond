@@ -1,13 +1,20 @@
-# Preconditions for Node.js 
+# Preconditions for Node.js
 [![Build Status](https://secure.travis-ci.org/MathieuTurcotte/node-precond.png?branch=master)](https://travis-ci.org/MathieuTurcotte/node-precond)
 [![NPM version](https://badge.fury.io/js/precond.png)](http://badge.fury.io/js/precond)
 
-Precondition checks for Node.js.
+Precondition checks for Node.js inspired by [Guava's precondition checking
+utilities](https://code.google.com/p/guava-libraries/wiki/PreconditionsExplained).
 
 ## Installation
 
 ```
 npm install precond
+```
+
+## Unit tests
+
+```
+npm test
 ```
 
 ## Overview
@@ -39,13 +46,13 @@ Provided checks are the following:
 
 - checkArgument(expression, [messageFormat, [formatArgs, ...]])
 - checkState(expression, [messageFormat, [formatArgs, ...]])
-- checkIsDef(expression, [messageFormat, [formatArgs, ...]])
-- checkIsDefAndNotNull(expression, [messageFormat, [formatArgs, ...]])
-- checkIsArray(expression, [messageFormat, [formatArgs, ...]])
-- checkIsNumber(expression, [messageFormat, [formatArgs, ...]])
-- checkIsBoolean(expression, [messageFormat, [formatArgs, ...]])
-- checkIsFunction(expression, [messageFormat, [formatArgs, ...]])
-- checkIsObject(expression, [messageFormat, [formatArgs, ...]])
+- checkIsDef(expression, [messageFormat, [formatArgs, ...]]) -> expression
+- checkIsDefAndNotNull(expression, [messageFormat, [formatArgs, ...]]) -> expression
+- checkIsArray(expression, [messageFormat, [formatArgs, ...]]) -> expression
+- checkIsNumber(expression, [messageFormat, [formatArgs, ...]]) -> expression
+- checkIsBoolean(expression, [messageFormat, [formatArgs, ...]]) -> expression
+- checkIsFunction(expression, [messageFormat, [formatArgs, ...]]) -> expression
+- checkIsObject(expression, [messageFormat, [formatArgs, ...]]) -> expression
 
 ## API
 
@@ -57,7 +64,7 @@ Provided checks are the following:
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensure that expression is true. Throws an `IllegalArgumentError` if expression
+Ensures that expression is true. Throws an `IllegalArgumentError` if expression
 is false.
 
 #### precond.checkState(expression, [messageFormat, [formatArgs, ...]])
@@ -66,7 +73,7 @@ is false.
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensure that expression is true. Throws an `IllegalStateError` if expression
+Ensures that expression is true. Throws an `IllegalStateError` if expression
 is false.
 
 #### precond.checkIsDef(expression, [messageFormat, [formatArgs, ...]])
@@ -75,8 +82,9 @@ is false.
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensure that expression is defined (could be null). Throws an
-`IllegalArgumentError` if expression is undefined.
+Ensures that expression is defined (could be null). Throws an
+`IllegalArgumentError` if expression is undefined. Returns the value of
+the expression that was validated.
 
 #### precond.checkIsDefAndNotNull(expression, [messageFormat, [formatArgs, ...]])
 
@@ -84,8 +92,9 @@ Ensure that expression is defined (could be null). Throws an
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensure that expression is defined and not null. Throws an
-`IllegalArgumentError` if expression is undefined or null.
+Ensures that expression is defined and not null. Throws an
+`IllegalArgumentError` if expression is undefined or null. Returns the value of
+the expression that was validated.
 
 #### precond.checkIsArray(expression, [messageFormat, [formatArgs, ...]])
 
@@ -93,8 +102,9 @@ Ensure that expression is defined and not null. Throws an
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensure that expression is an array. Throws an `IllegalArgumentError` if
-expression isn't an array.
+Ensures that expression is an array. Throws an `IllegalArgumentError` if
+expression isn't an array. Returns the value of the expression that was
+validated.
 
 #### precond.checkIsNumber(expression, [messageFormat, [formatArgs, ...]])
 
@@ -102,8 +112,9 @@ expression isn't an array.
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensure that expression is a number. Throws an `IllegalArgumentError` if
-expression isn't a number.
+Ensures that expression is a number. Throws an `IllegalArgumentError` if
+expression isn't a number. Returns the value of the expression that was
+validated.
 
 #### precond.checkIsBoolean(expression, [messageFormat, [formatArgs, ...]])
 
@@ -111,8 +122,9 @@ expression isn't a number.
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensure that expression is a boolean. Throws an `IllegalArgumentError` if
-expression isn't a boolean.
+Ensures that expression is a boolean. Throws an `IllegalArgumentError` if
+expression isn't a boolean. Returns the value of the expression that was
+validated.
 
 #### precond.checkIsFunction(expression, [messageFormat, [formatArgs, ...]])
 
@@ -120,8 +132,9 @@ expression isn't a boolean.
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensure that expression is a function. Throws an `IllegalArgumentError` if
-expression isn't a function.
+Ensures that expression is a function. Throws an `IllegalArgumentError` if
+expression isn't a function. Returns the value of the expression that was
+validated.
 
 #### precond.checkIsObject(expression, [messageFormat, [formatArgs, ...]])
 
@@ -129,8 +142,9 @@ expression isn't a function.
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensure that expression is an object. Throws an `IllegalArgumentError` if
-expression isn't an object.
+Ensures that expression is an object. Throws an `IllegalArgumentError` if
+expression isn't an object. Returns the value of the expression that was
+validated.
 
 ### Class precond.IllegalArgumentError
 
@@ -138,14 +152,8 @@ Extends `Error` and is thrown to signal illegal arguments.
 
 ### Class precond.IllegalStateError
 
-Extends `Error` and is thrown to signal that the program or object as reached
+Extends `Error` and is thrown to signal that the program or object has reached
 an illegal state.
-
-## Unit tests
-
-```
-npm test
-```
 
 ## License
 
