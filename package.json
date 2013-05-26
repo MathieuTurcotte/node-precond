@@ -1,9 +1,9 @@
 {
     "name": "precond",
-    "description": "Preconditions checking utilities.",
-    "version": "0.1.1",
+    "description": "Precondition checking utilities.",
+    "version": "0.2.0",
     "author": "Mathieu Turcotte <turcotte.mat@gmail.com>",
-    "keywords": ["preconditions", "asserts", "invariants"],
+    "keywords": ["precondition", "assert", "invariant", "contract", "condition"],
     "repository": {
         "type": "git",
         "url": "https://github.com/MathieuTurcotte/node-precond.git"
