@@ -42,7 +42,7 @@ both produce the same stack trace.**
 All arguments after the message will be used to format the actual error
 message that will be thrown.
 
-Provided checks are the following:
+The following precondition checks are provded:
 
 - checkArgument(expression, [messageFormat, [formatArgs, ...]])
 - checkState(expression, [messageFormat, [formatArgs, ...]])
