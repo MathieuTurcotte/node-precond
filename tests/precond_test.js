@@ -46,6 +46,17 @@ exports["Precond"] = {
         test.done();
     },
 
+    "checkIsString": function(test) {
+        test.doesNotThrow(function() { precond.checkIsString(''); });
+        test.doesNotThrow(function() { precond.checkIsString(String('')); });
+        test.doesNotThrow(function() { precond.checkIsString(new String('')); });
+        test.throws(function() {
+            precond.checkIsString({}, 'fake error string');
+        }, /fake error string/);
+        test.equals('foo', precond.checkIsString('foo'));
+        test.done();
+    },
+
     "checkIsArray": function(test) {
         test.doesNotThrow(function() { precond.checkIsArray([]); });
         test.throws(function() {

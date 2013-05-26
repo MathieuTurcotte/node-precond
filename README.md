@@ -48,6 +48,7 @@ The following precondition checks are provded:
 - checkState(expression, [messageFormat, [formatArgs, ...]])
 - checkIsDef(expression, [messageFormat, [formatArgs, ...]]) -> expression
 - checkIsDefAndNotNull(expression, [messageFormat, [formatArgs, ...]]) -> expression
+- checkIsString(expression, [messageFormat, [formatArgs, ...]]) -> expression
 - checkIsArray(expression, [messageFormat, [formatArgs, ...]]) -> expression
 - checkIsNumber(expression, [messageFormat, [formatArgs, ...]]) -> expression
 - checkIsBoolean(expression, [messageFormat, [formatArgs, ...]]) -> expression
@@ -94,6 +95,16 @@ the expression that was validated.
 
 Ensures that expression is defined and not null. Throws an
 `IllegalArgumentError` if expression is undefined or null. Returns the value of
+the expression that was validated.
+
+#### precond.checkIsString(expression, [messageFormat, [formatArgs, ...]])
+
+- expression: the expression that is required to be a string
+- messageFormat: error message format template
+- formatArgs: arguments to be substituted into the message template
+
+Ensures that expression is a string or a String object. Throws an
+`IllegalArgumentError` if expression isn't a string. Returns the value of
 the expression that was validated.
 
 #### precond.checkIsArray(expression, [messageFormat, [formatArgs, ...]])
