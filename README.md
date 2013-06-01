@@ -44,117 +44,117 @@ message that will be thrown.
 
 The following precondition checks are provded:
 
-- checkArgument(expression, [messageFormat, [formatArgs, ...]])
-- checkState(expression, [messageFormat, [formatArgs, ...]])
-- checkIsDef(expression, [messageFormat, [formatArgs, ...]]) -> expression
-- checkIsDefAndNotNull(expression, [messageFormat, [formatArgs, ...]]) -> expression
-- checkIsString(expression, [messageFormat, [formatArgs, ...]]) -> expression
-- checkIsArray(expression, [messageFormat, [formatArgs, ...]]) -> expression
-- checkIsNumber(expression, [messageFormat, [formatArgs, ...]]) -> expression
-- checkIsBoolean(expression, [messageFormat, [formatArgs, ...]]) -> expression
-- checkIsFunction(expression, [messageFormat, [formatArgs, ...]]) -> expression
-- checkIsObject(expression, [messageFormat, [formatArgs, ...]]) -> expression
+- checkArgument(value, [messageFormat, [formatArgs, ...]])
+- checkState(value, [messageFormat, [formatArgs, ...]])
+- checkIsDef(value, [messageFormat, [formatArgs, ...]]) -> value
+- checkIsDefAndNotNull(value, [messageFormat, [formatArgs, ...]]) -> value
+- checkIsString(value, [messageFormat, [formatArgs, ...]]) -> value
+- checkIsArray(value, [messageFormat, [formatArgs, ...]]) -> value
+- checkIsNumber(value, [messageFormat, [formatArgs, ...]]) -> value
+- checkIsBoolean(value, [messageFormat, [formatArgs, ...]]) -> value
+- checkIsFunction(value, [messageFormat, [formatArgs, ...]]) -> value
+- checkIsObject(value, [messageFormat, [formatArgs, ...]]) -> value
 
 ## API
 
 ### Static functions
 
-#### precond.checkArgument(expression, [messageFormat, [formatArgs, ...]])
+#### precond.checkArgument(value, [messageFormat, [formatArgs, ...]])
 
-- expression: the expression that is required to be truthy
+- value: the value that is required to be truthy
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensures that expression is true. Throws an `IllegalArgumentError` if expression
+Ensures that value is true. Throws an `IllegalArgumentError` if value
 is false.
 
-#### precond.checkState(expression, [messageFormat, [formatArgs, ...]])
+#### precond.checkState(value, [messageFormat, [formatArgs, ...]])
 
-- expression: the expression that is required to be truthy
+- value: the value that is required to be truthy
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensures that expression is true. Throws an `IllegalStateError` if expression
+Ensures that value is true. Throws an `IllegalStateError` if value
 is false.
 
-#### precond.checkIsDef(expression, [messageFormat, [formatArgs, ...]])
+#### precond.checkIsDef(value, [messageFormat, [formatArgs, ...]])
 
-- expression: the expression that is required to be defined
+- value: the value that is required to be defined
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensures that expression is defined (could be null). Throws an
-`IllegalArgumentError` if expression is undefined. Returns the value of
-the expression that was validated.
+Ensures that value is defined (could be null). Throws an
+`IllegalArgumentError` if value is undefined. Returns the value of
+the value that was validated.
 
-#### precond.checkIsDefAndNotNull(expression, [messageFormat, [formatArgs, ...]])
+#### precond.checkIsDefAndNotNull(value, [messageFormat, [formatArgs, ...]])
 
-- expression: the expression that is required to be defined and not null
+- value: the value that is required to be defined and not null
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensures that expression is defined and not null. Throws an
-`IllegalArgumentError` if expression is undefined or null. Returns the value of
-the expression that was validated.
+Ensures that value is defined and not null. Throws an
+`IllegalArgumentError` if value is undefined or null. Returns the value of
+the value that was validated.
 
-#### precond.checkIsString(expression, [messageFormat, [formatArgs, ...]])
+#### precond.checkIsString(value, [messageFormat, [formatArgs, ...]])
 
-- expression: the expression that is required to be a string
+- value: the value that is required to be a string
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensures that expression is a string or a String object. Throws an
-`IllegalArgumentError` if expression isn't a string. Returns the value of
-the expression that was validated.
+Ensures that value is a string or a String object. Throws an
+`IllegalArgumentError` if value isn't a string. Returns the value of
+the value that was validated.
 
-#### precond.checkIsArray(expression, [messageFormat, [formatArgs, ...]])
+#### precond.checkIsArray(value, [messageFormat, [formatArgs, ...]])
 
-- expression: the expression that is required to be an array
+- value: the value that is required to be an array
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensures that expression is an array. Throws an `IllegalArgumentError` if
-expression isn't an array. Returns the value of the expression that was
+Ensures that value is an array. Throws an `IllegalArgumentError` if
+value isn't an array. Returns the value of the value that was
 validated.
 
-#### precond.checkIsNumber(expression, [messageFormat, [formatArgs, ...]])
+#### precond.checkIsNumber(value, [messageFormat, [formatArgs, ...]])
 
-- expression: the expression that is required to be a number
+- value: the value that is required to be a number
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensures that expression is a number. Throws an `IllegalArgumentError` if
-expression isn't a number. Returns the value of the expression that was
+Ensures that value is a number. Throws an `IllegalArgumentError` if
+value isn't a number. Returns the value of the value that was
 validated.
 
-#### precond.checkIsBoolean(expression, [messageFormat, [formatArgs, ...]])
+#### precond.checkIsBoolean(value, [messageFormat, [formatArgs, ...]])
 
-- expression: the expression that is required to be a boolean
+- value: the value that is required to be a boolean
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensures that expression is a boolean. Throws an `IllegalArgumentError` if
-expression isn't a boolean. Returns the value of the expression that was
+Ensures that value is a boolean. Throws an `IllegalArgumentError` if
+value isn't a boolean. Returns the value of the value that was
 validated.
 
-#### precond.checkIsFunction(expression, [messageFormat, [formatArgs, ...]])
+#### precond.checkIsFunction(value, [messageFormat, [formatArgs, ...]])
 
-- expression: the expression that is required to be a function
+- value: the value that is required to be a function
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensures that expression is a function. Throws an `IllegalArgumentError` if
-expression isn't a function. Returns the value of the expression that was
+Ensures that value is a function. Throws an `IllegalArgumentError` if
+value isn't a function. Returns the value of the value that was
 validated.
 
-#### precond.checkIsObject(expression, [messageFormat, [formatArgs, ...]])
+#### precond.checkIsObject(value, [messageFormat, [formatArgs, ...]])
 
-- expression: the expression that is required to be an object
+- value: the value that is required to be an object
 - messageFormat: error message format template
 - formatArgs: arguments to be substituted into the message template
 
-Ensures that expression is an object. Throws an `IllegalArgumentError` if
-expression isn't an object. Returns the value of the expression that was
+Ensures that value is an object. Throws an `IllegalArgumentError` if
+value isn't an object. Returns the value of the value that was
 validated.
 
 ### Class precond.IllegalArgumentError
