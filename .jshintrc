@@ -67,7 +67,7 @@
     // If === should be required.
     "eqeqeq": false,
     // If == null comparisons should be tolerated.
-    "eqnull": false,
+    "eqnull": true,
     // If eval should be allowed.
     "evil": true,
     // If ExpressionStatement should be allowed as Programs.
