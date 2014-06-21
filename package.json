@@ -9,8 +9,8 @@
         "url": "https://github.com/MathieuTurcotte/node-precond.git"
     },
     "devDependencies": {
-        "nodeunit": "0.8",
-        "jshint": "2.1"
+        "nodeunit": "0.9",
+        "jshint": "2.5"
     },
     "scripts": {
         "pretest": "node_modules/.bin/jshint lib/ examples/ index.js",
