@@ -1,7 +1,7 @@
 {
     "name": "precond",
     "description": "Precondition checking utilities.",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "author": "Mathieu Turcotte <turcotte.mat@gmail.com>",
     "keywords": ["precondition", "assert", "invariant", "contract", "condition"],
     "repository": {
