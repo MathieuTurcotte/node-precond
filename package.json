@@ -4,6 +4,7 @@
     "version": "0.2.3",
     "author": "Mathieu Turcotte <turcotte.mat@gmail.com>",
     "keywords": ["precondition", "assert", "invariant", "contract", "condition"],
+    "license": "MIT",
     "repository": {
         "type": "git",
         "url": "https://github.com/MathieuTurcotte/node-precond.git"
